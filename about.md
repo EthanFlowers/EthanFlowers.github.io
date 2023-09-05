@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+About Me
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I am a senior computer science major at AppState. Currently looking for cyber security internships.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[flowersem@appstate.edu](mailto:flowersem@appstate.edu)
