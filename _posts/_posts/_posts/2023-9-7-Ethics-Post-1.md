@@ -1,0 +1,8 @@
+# Ethics Blog Post
+
+When discussing our personal ethics in class it seemed that many people shared similar values that govern their lives. For example many people mentioned the “Golden Rule” and used it as a general guideline for how to treat others in their daily lives. I would say that I also share this value and try to follow this rule when carrying out my daily life. I found it interesting to hear everyone's ethics, which brought up new ideas that I had never thought about before. 
+
+The influence of childhood seemed to be another common theme that was brought up with everything from parents, school choice to pop culture affecting how people think and interact with the world today. I was surprised to see that so many people had a homeschooling background, which was the opposite of my all public school education. It was eye opening to see how vastly different someone's childhood was just based upon their schooling situation. It was also interesting to see how this affected the way they think about things, but many of the commonalities between people’s ethics still remained. 
+
+Another interesting aspect of this was how peoples ethics were challenged through different situations that arose during their life. When an ethical challenge came up it either confirmed or changed someone's ethical framework. The topic of death was brought up and interested me  because it is one of those life situations everyone faces during their lifetime and challenges someone's way of thinking. Also, the influence of parents or friends in someone's life also played a major role in contributing to someone's ethics. Overall the discussions were insightful and made me reflect about my own life and ethics.
+

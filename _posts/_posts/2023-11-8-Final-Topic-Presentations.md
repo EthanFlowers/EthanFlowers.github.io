@@ -1,0 +1,3 @@
+# Final Topic Presentations
+
+After hearing all of the possible topic presentations I am looking forward to the presentations of everyone else. I think that many of the topics will cover some interesting things that I did not even think about before. My favorite one was about company technical interviews. After all I am also looking for a job, and the interview process is something that I want to learn more about. From phone screens, technical interviews and personality tests, the hiring process today involves many steps and hoops to jump through to be successful. I want to learn the most that I can and how companies are processing applicants to have the best chances and landing a job, so I am looking forward to hearing more about this topic. 
