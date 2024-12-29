@@ -130,7 +130,7 @@ With this knowledge we can now create a program that does the following:
 	- If so, output the random number and the count
 	- If not, increment count, move to next random number
 
-```
+``` go
 package main
 
 import (
