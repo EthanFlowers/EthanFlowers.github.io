@@ -1,0 +1,54 @@
+# Site settings
+title: Ethan Flowers
+tagline: CTF player · pwn & reverse engineering · security writeups
+description: >-
+  Security writeups and notes from Ethan Flowers — CTF player focused on
+  binary exploitation, reverse engineering, and all things cybersecurity.
+author: Ethan Flowers
+url: "https://ethanflowers.github.io"
+baseurl: ""
+lang: en
+
+social:
+  github: EthanFlowers
+
+nav:
+  - title: Writeups
+    url: /
+  - title: About
+    url: /about/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: highlight
+
+# Keep the same URL shape as the old site so existing links still work
+permalink: /:year-:month-:day-:title/
+timezone: America/Toronto
+date_format: "%b %-d, %Y"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

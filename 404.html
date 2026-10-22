@@ -1,0 +1,18 @@
+---
+layout: default
+title: 404 - Not Found
+permalink: /404.html
+sitemap: false
+---
+<section class="notfound container" aria-labelledby="nf-title">
+  <div class="terminal" role="presentation">
+    <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="terminal-body">
+      <p><span class="t-prompt">$</span> cd ./requested/path</p>
+      <p class="t-err">bash: cd: no such file or directory</p>
+      <h1 id="nf-title" class="nf-title">404: path not found</h1>
+      <p class="muted">The page you were looking for doesn&rsquo;t exist, or it moved.</p>
+      <p><span class="t-prompt">$</span> <a href="{{ '/' | relative_url }}">cd ~</a><span class="brand-cursor" aria-hidden="true"></span></p>
+    </div>
+  </div>
+</section>

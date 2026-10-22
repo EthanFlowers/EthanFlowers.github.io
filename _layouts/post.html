@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+{%- assign words = content | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 -%}
+{%- if minutes < 1 -%}{%- assign minutes = 1 -%}{%- endif -%}
+<article class="post container" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <a class="back-link" href="{{ '/' | relative_url }}">&larr; cd ..</a>
+    <h1 class="post-title" itemprop="headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
+      <span class="sep" aria-hidden="true">·</span>
+      <span>{{ minutes }} min read</span>
+    </p>
+    {%- if page.description %}
+    <p class="post-lede">{{ page.description }}</p>
+    {%- endif %}
+    {%- if page.tags.size > 0 %}
+    <ul class="tags" aria-label="Tags">
+      {%- for tag in page.tags %}
+      <li class="tag">{{ tag }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </header>
+
+  <div class="post-content prose" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More writeups">
+    {%- if page.previous %}
+    <a class="post-nav-link prev" href="{{ page.previous.url | relative_url }}" rel="prev">
+      <span class="post-nav-label">&larr; Previous</span>
+      <span class="post-nav-title">{{ page.previous.title | escape }}</span>
+    </a>
+    {%- else %}
+    <span></span>
+    {%- endif %}
+    {%- if page.next %}
+    <a class="post-nav-link next" href="{{ page.next.url | relative_url }}" rel="next">
+      <span class="post-nav-label">Next &rarr;</span>
+      <span class="post-nav-title">{{ page.next.title | escape }}</span>
+    </a>
+    {%- endif %}
+  </nav>
+  {%- endif %}
+</article>

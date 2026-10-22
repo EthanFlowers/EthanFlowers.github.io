@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+    <ul class="footer-links">
+      {%- if site.social.github %}
+      <li><a href="https://github.com/{{ site.social.github }}" rel="me noopener" target="_blank">GitHub</a></li>
+      {%- endif %}
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+    </ul>
+  </div>
+</footer>

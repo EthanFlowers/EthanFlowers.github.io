@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<section class="hero container" aria-labelledby="hero-title">
+  <p class="hero-kicker"><span aria-hidden="true">$</span> whoami</p>
+  <h1 id="hero-title" class="hero-title">{{ site.title }}</h1>
+  {%- if site.tagline %}
+  <p class="hero-tagline">{{ site.tagline }}</p>
+  {%- endif %}
+  {%- if site.description %}
+  <p class="hero-desc">{{ site.description | strip }}</p>
+  {%- endif %}
+  <ul class="chips" aria-label="Currently focused on">
+    <li class="chip chip-label">currently:</li>
+    <li class="chip">CTFs</li>
+    <li class="chip">pwn</li>
+    <li class="chip">rev</li>
+  </ul>
+  {{ content }}
+</section>
+
+<section class="writeups container" aria-labelledby="writeups-title">
+  <h2 id="writeups-title" class="section-title"><span class="section-hash" aria-hidden="true">#</span> Writeups</h2>
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  {%- if site.posts.size == 0 %}
+  <p class="muted">No writeups yet.</p>
+  {%- endif %}
+  {%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+  {%- for year in years %}
+  <section class="year-group" aria-labelledby="year-{{ year.name }}">
+    <h3 id="year-{{ year.name }}" class="year-heading">{{ year.name }}</h3>
+    <ol class="post-list">
+      {%- for post in year.items %}
+      <li>
+        <article class="post-card">
+          <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+          <h4 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4>
+          {%- assign summary = post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 -%}
+          {%- if summary != "" %}
+          <p class="post-card-desc">{{ summary }}</p>
+          {%- endif %}
+          {%- if post.tags.size > 0 %}
+          <ul class="tags" aria-label="Tags">
+            {%- for tag in post.tags %}
+            <li class="tag">{{ tag }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </article>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+</section>
